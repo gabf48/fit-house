@@ -1,7 +1,7 @@
 import { Component, ComponentFactoryResolver, OnDestroy, ViewChild } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { Router } from "@angular/router";
-import { from, Observable, Subscription} from "rxjs";
+import { Observable, Subscription} from "rxjs";
 import { AlertComponent } from "../shared/alert/alert.component";
 import { PlaceholderDirective } from "../shared/placeholder/placeholder.directive";
 import { AuthService, AuthResponseData } from "./auth.service";
@@ -53,7 +53,7 @@ export class AuthComponent implements OnDestroy{
         resData => {
         console.log(resData);
         this.isLoading = false;
-        this.router.navigate(['/recipes']);
+        this.router.navigate(['/home']);
     }, 
     errorMessage => {
        console.log(errorMessage); 
