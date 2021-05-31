@@ -44,8 +44,14 @@ loadChildren: () => import('./clienti/clienti.module').then(m => m.ClinetiModule
 {path: 'galerie',
 loadChildren: () => import('./galerie/galerie.module').then(m => m.GalerieModule)},
 
-{path: 'cont-nou',
-loadChildren: () => import('./cont-nou/cont-nou.module').then(m => m.ContNouModule)}
+{path: 'date-personale',
+loadChildren: () => import('./cont/date-personale/date-personale.module').then(m => m.DatePersonaleModule)},
+
+{path: 'antrenor',
+loadChildren: ()=> import('./cont/antrenor/antrenor.module').then(m => m.AntrenorModule)},
+
+{path: 'abonament',
+loadChildren: ()=> import('./cont/abonament/abonament.module').then(m => m.AbonamentModule)}
 
 ];
 

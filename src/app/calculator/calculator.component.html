@@ -1,1 +1,36 @@
-<p>calculator works!</p>
+
+<div *ngFor="let gen of genuri">
+    <input 
+    type="radio"
+    name="genClient"
+    value="{{gen}}"
+    (change)="radioChangeHandler($event)">
+    <i>{{gen}}</i>
+</div>
+
+<input 
+    type="number" 
+    placeholder="greutate in kg"
+    name="greutate"
+    ngModel
+    #greutate="ngModel"
+    required
+    class="form-control"
+    min="0"
+    pattern="^[0-9]+\.[0-9][0-9]$"> 
+    
+<br><br>
+
+<input
+    type="number" 
+    placeholder="inlaltime in cm"
+    name="inaltime"
+    ngModel
+    #inaltime="ngModel"
+    required
+    class="form-control"
+    min="0"
+    pattern="^[0-9]+\.[0-9][0-9]$"
+    > <br> <br>
+<button value="Calculeaza" (click)="onCalculeazaIMC()">Calculeaza</button>
+<p>IMC-ul tau este: {{imc}}</p>
