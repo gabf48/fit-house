@@ -1,15 +1,14 @@
-import { ContNouComponent } from './cont-nou.component';
+import { AbonamentComponent } from './abonament.component';
 import { NgModule } from "@angular/core";
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-    declarations: [ContNouComponent],
+    declarations: [AbonamentComponent],
     imports: [
         FormsModule,
         RouterModule.forChild([
-            { path: '', component: ContNouComponent },
-        ])
-    ]
+            { path: '', component: AbonamentComponent},
+        ])]
 })
-export class ContNouModule {}
+export class AbonamentModule {}

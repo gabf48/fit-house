@@ -18,13 +18,22 @@
         <li routerLinkActive="active"><a routerLink="/orar">Orar</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li routerLinkActive="active" *ngIf="isAuthenticated"><a routerLink="/cont"><i class="fa fa-fw fa-user"></i>Contul meu</a></li>
+
+        <li routerLinkActive="active" *ngIf="isAuthenticated">
+
+          <li class="dropdown" appDropdown *ngIf="isAuthenticated">
+            <a style="cursor: pointer;" class="dropdown-toggle" role="button">Contul meu <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a style="cursor: pointer;" routerLink="/date-personale">Date personale</a></li>
+              <li><a style="cursor: pointer;" routerLink="/abonament">Abonament</a></li> 
+              <li><a style="cursor: pointer;" routerLink="/antrenor">Antrenor</a></li> 
+            </ul>
+          </li>
+
         <li routerLinkActive="active" *ngIf="!isAuthenticated">
-          <a style="cursor: pointer;" routerLink="/auth"><i class="fa fa-fw fa-user"></i>Autentificare</a>
+          <a style="cursor: pointer;" routerLink="/auth"  class="dropdown-toggle" role="button"><i class="fa fa-fw fa-user"></i>Autentificare</a>
         </li>
-        <li routerLinkActive="active" *ngIf="!isAuthenticated">
-          <a style="cursor: pointer;" routerLink="/cont-nou"><i class="fa fa-fw fa-user"></i>Cont Nou</a>
-        </li>
+
         <li *ngIf="isAuthenticated">
           <a style="cursor: pointer;" (click)="onLogout()">Delogare</a>
         </li>

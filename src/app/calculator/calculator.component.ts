@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
 
-  constructor() { }
+  imc: number;
+  gen: string = '';
+  genuri: any = [
+    'Masculin',
+    'Feminin'
+  ];
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
+  }
+
+  radioChangeHandler(event: any){
+    this.gen = event.target.value;
+  }
+
+  onCalculeazaIMC(){
+    this.imc = 10;
   }
 
 }
