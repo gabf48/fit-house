@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
 
   imc: number;
-  gen: string = '';
-  genuri: any = [
+  // gen: string = '';
+  name1: number = null;
+  name2: number = null;
+
+  genuri: string[] = [
     'Masculin',
     'Feminin'
   ];
@@ -20,12 +23,12 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  radioChangeHandler(event: any){
-    this.gen = event.target.value;
-  }
+  // radioChangeHandler(event: any){
+  //   this.gen = event.target.value;
+  // }
 
   onCalculeazaIMC(){
-    this.imc = 10;
+    this.imc = this.name1 * this.name2;
   }
 
 }
