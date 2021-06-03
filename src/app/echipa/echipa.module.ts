@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
         RouterModule.forChild([
             { path: '', component: EchipaComponent },
         ])
-    ]
+    ], 
+    exports: []
 })
+
 export class EchipaModule {}

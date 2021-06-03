@@ -1,3 +1,5 @@
+import { EchipaModule } from './echipa/echipa.module';
+import { EchipaComponent } from './echipa/echipa.component';
 import { CalculatorModule } from './calculator/calculator.module';
 import { LoggingService } from './logging.service';
 import { SharedModule } from './shared/shared.module';
@@ -10,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core.module';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
     AppRoutingModule,
     SharedModule,
     CoreModule,
-    CalculatorModule
+    CalculatorModule,
+    BrowserAnimationsModule
   ],
  
       bootstrap: [AppComponent],

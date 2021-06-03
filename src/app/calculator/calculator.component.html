@@ -1,19 +1,28 @@
 
-<div *ngFor="let gen of genuri">
-    <input 
+<li *ngFor="let gen of genuri"> {{gen}}
+    <!-- <input 
     type="radio"
     name="genClient"
     value="{{gen}}"
     (change)="radioChangeHandler($event)">
-    <i>{{gen}}</i>
-</div>
+    <i>{{gen}}</i> -->
+    </li>
 
+    <div class="btn-group mr-3">
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+          <button class="btn btn-outline-primary" ngbDropdownToggle>Gen</button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <button ngbDropdownItem>Masculin</button>
+            <button ngbDropdownItem>Feminin</button>
+          </div>
+        </div>
+      </div>
+   
 <input 
     type="number" 
     placeholder="greutate in kg"
     name="greutate"
-    ngModel
-    #greutate="ngModel"
+    [(ngModel)]="name1"    
     required
     class="form-control"
     min="0"
@@ -25,8 +34,7 @@
     type="number" 
     placeholder="inlaltime in cm"
     name="inaltime"
-    ngModel
-    #inaltime="ngModel"
+    [(ngModel)]="name2"
     required
     class="form-control"
     min="0"
