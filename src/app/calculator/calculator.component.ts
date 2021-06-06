@@ -9,15 +9,17 @@ export class CalculatorComponent implements OnInit {
 
   imc: number;
   gen = 'masculin';
-  name1: number = null;
-  name2: number = null;
-
+  inaltime: number = null;
+  varsta: number = null;
+  dif: number = this.inaltime - 150;
+  dif2: number = this.varsta - 20;
 
 
   genuri: string[] = [
     'Masculin',
     'Feminin'
   ];
+ 
   constructor() {
     
    }
@@ -29,15 +31,25 @@ export class CalculatorComponent implements OnInit {
   //   this.gen = event.target.value;
   // }
 
+  
   onCalculeazaIMC(){
 
+if (this.inaltime != null && this.varsta != null) {
+
     if (this.gen == "masculin"){
-   this.imc = 100;
+      
+   this.imc = this.inaltime - 100 -((this.inaltime - 150) /4 +( this.varsta - 20)/4);
   }
 
   if (this.gen == "feminin"){
-    this.imc = 200;
+    this.imc = this.inaltime - 100 -((this.inaltime - 150) /2,5 +( this.varsta - 20)/6);
+  } 
+  } else {
+        
   }
+
+  
 }
+  
 
 }

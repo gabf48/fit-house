@@ -60,3 +60,10 @@
       border-radius: 50%;
       background: white;
   }
+
+  .btn-outline-success {
+    background-color:burlywood;
+    border-radius: 30%;
+    color: rebeccapurple;
+    border-color: seagreen;
+  }
