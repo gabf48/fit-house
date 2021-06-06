@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
 
   imc: number;
-  // gen: string = '';
+  gen = 'masculin';
   name1: number = null;
   name2: number = null;
+
+
 
   genuri: string[] = [
     'Masculin',
@@ -28,7 +30,14 @@ export class CalculatorComponent implements OnInit {
   // }
 
   onCalculeazaIMC(){
-    this.imc = this.name1 * this.name2;
+
+    if (this.gen == "masculin"){
+   this.imc = 100;
   }
+
+  if (this.gen == "feminin"){
+    this.imc = 200;
+  }
+}
 
 }
