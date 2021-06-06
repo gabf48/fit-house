@@ -26,17 +26,6 @@
 
   
 
-    <label>Greutate</label>
-<input 
-    type="number" 
-    placeholder="greutate in kg"
-    name="greutate"
-    [(ngModel)]="name1"    
-    required
-    class="form-control"
-    min="0"
-    pattern="^[0-9]+\.[0-9][0-9]$"> 
-  
 <br>
 
 <label>Inaltime</label>
@@ -44,7 +33,7 @@
     type="number" 
     placeholder="inlaltime in cm"
     name="inaltime"
-    [(ngModel)]="name2"
+    [(ngModel)]="inaltime"
     required
     class="form-control"
     min="0"
@@ -52,16 +41,26 @@
     > <br> 
 
     <label>Varsta  </label>
-    <br>
-    <select name="demo" id="#">
-      <option selected="selected" value="one">Option 1</option>
-      <option value="two">Option 2</option>
-      <option value="three">Option 3</option>
-      </select>
+    <input
+    type="number" 
+    placeholder="varsta in ani"
+    name="varsta"
+    [(ngModel)]="varsta"
+    required
+    class="form-control"
+    min="0"
+    pattern="^[0-9]+\.[0-9][0-9]$"
+    >   
    
 
 
    
    <br>   <br>
-<button value="Calculeaza" (click)="onCalculeazaIMC()">Calculeaza</button>
-<p>IMC-ul tau este: {{imc}}</p>
+<button 
+  type="button" 
+  value="Calculeaza" 
+  class="btn btn-outline-success" 
+  (click)="onCalculeazaIMC()"
+  >Calculeaza
+</button>
+<p>Greutatea ideala este: {{imc}} kg</p>
