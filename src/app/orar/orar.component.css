@@ -1,0 +1,9 @@
+.aria{
+    text-align: center;
+    border-style: solid;
+    border-width: 0.2cm;
+    box-sizing: border-box;
+    border-radius: 35%;
+    border-color: steelblue;
+    background-color: yellow;
+}
