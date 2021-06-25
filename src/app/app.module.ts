@@ -1,6 +1,6 @@
 import { CalculatorModule } from './calculator/calculator.module';
 import { SharedModule } from './shared/shared.module';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,7 +10,8 @@ import { CoreModule } from './core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-
+import { CommonModule} from '@angular/common';
+import { TarifeModule } from "./tarife/tarife.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     HeaderComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,  
+    CommonModule,
     HttpClientModule,
     AppRoutingModule,
     SharedModule,
@@ -27,10 +29,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     SlickCarouselModule,
-
+    TarifeModule
   ],
-
-  schemas: [CUSTOM_ELEMENTS_SCHEMA ],
  
       bootstrap: [AppComponent],
     

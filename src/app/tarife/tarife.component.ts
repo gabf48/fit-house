@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Abonamente } from './abonamente';
+import { ABONAMENTE } from './detalii-abonamente';
 
 @Component({
   selector: 'app-tarife',
@@ -6,22 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tarife.component.css']
 })
 export class TarifeComponent implements OnInit {
-  passenger: Passenger = new Passenger("Lord");
 
-  titleArray: ValueAndText[] = [new ValueAndText("Mister", "Mister-Text"),
-                                new ValueAndText("Lord", "Lord-Text")];
+  heroes = ABONAMENTE;
+  selectedHero?: Abonamente;
 
-  
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   
   }
 
-}
+  onSelect(hero: Abonamente): void {
+    this.selectedHero = hero;
+  }
 
-class Passenger {
-  constructor(public Title: string) { };
-}
-class ValueAndText {
-  constructor(public Value: string, public Text: string) { }
 }
