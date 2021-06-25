@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CommonModule} from '@angular/common';
 import { TarifeModule } from "./tarife/tarife.module";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TarifeModule } from "./tarife/tarife.module";
     BrowserAnimationsModule,
     ReactiveFormsModule,
     SlickCarouselModule,
-    TarifeModule
+    TarifeModule,
+    FontAwesomeModule
   ],
  
       bootstrap: [AppComponent],
