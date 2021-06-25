@@ -4,9 +4,11 @@
         <p>Tip abonament</p>
     </div>
     <div class="col-sm-3 col-md-3">
-        <p>
-            Dropdown
-        </p>
+        <select [(ngModel)]="passenger.Title">
+            <option *ngFor="let title of titleArray" [value]="title.Value">
+              {{title.Text}}
+            </option>
+        </select>
     </div>
     <div class="col-sm-3 col-md-3"></div>
 </div>

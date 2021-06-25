@@ -1,6 +1,6 @@
 import { CalculatorModule } from './calculator/calculator.module';
 import { SharedModule } from './shared/shared.module';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 
 @NgModule({
   declarations: [
@@ -23,11 +25,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     CoreModule,
     CalculatorModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SlickCarouselModule,
+
   ],
+
+  schemas: [CUSTOM_ELEMENTS_SCHEMA ],
  
       bootstrap: [AppComponent],
-//      providers: [LoggingService]
     
 })
 export class AppModule { }
