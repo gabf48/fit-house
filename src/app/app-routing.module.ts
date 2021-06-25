@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/articole', pathMatch: 'full' },
 
   { path: 'shopping-list', 
   loadChildren: () => import('./shopping-list/shopping-list.module')
@@ -15,9 +15,6 @@ loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
   { path: 'orar',
 loadChildren: () => import('./orar/orar.module').then(m => m.OrarModule)
 },
-
-{path: 'home',
-loadChildren: () => import('./homefit/homefit.module').then(m => m.HomefitModule)},
   
 {path: 'tarife',
 loadChildren: () => import('./tarife/tarife.module').then(m => m.TarifeModule)},

@@ -27,9 +27,6 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // radioChangeHandler(event: any){
-  //   this.gen = event.target.value;
-  // }
 
   
   onCalculeazaIMC(){
