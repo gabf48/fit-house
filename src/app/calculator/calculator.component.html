@@ -2,7 +2,7 @@
  <div class="col-6 col-md-4">
   <div class="panel panel-info">
     <div class="panel-heading">
-    <h1 class="panel-title" align="center">Greautatea ideala</h1>
+    <h1 class="panel-title" align="center">Greautatea ideală</h1>
     </div>
     <div class="panel-body">
       <li *ngFor="let gen of genuri"> {{gen}}
@@ -28,10 +28,10 @@
   
   <br>
   
-  <label>Inaltime</label>
+  <label>Înălțime</label>
   <input
       type="number" 
-      placeholder="inlaltime in cm"
+      placeholder="înălțime în cm"
       name="inaltime"
       [(ngModel)]="inaltime"
       required
@@ -40,10 +40,10 @@
       pattern="^[0-9]+\.[0-9][0-9]$"
       > <br> 
   
-      <label>Varsta  </label>
+      <label>Vârstă  </label>
       <input
       type="number" 
-      placeholder="varsta in ani"
+      placeholder="vârstă în ani"
       name="varsta"
       [(ngModel)]="varsta"
       required
@@ -61,7 +61,7 @@
     value="Calculeaza" 
     class="btn calc" 
     (click)="onCalculeazaIMC()"
-    >Calculeaza
+    >Calculează
   </button>
   
     </div>
