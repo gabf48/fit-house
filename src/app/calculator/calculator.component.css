@@ -62,19 +62,13 @@
   }
 
   .top {
-    display: inline-block;
-    align-content: center;
-    top: 0.7em;
-    left: 0.5em;
-    color: black;
+    line-height: 2em;
+    border-color: #6b91af;
+    top: 2em;
+    left: 2em;
     text-align: center;
-    line-height: 1em;
-    padding: 0.8em 0.7em 0 0.7em;
     position: relative;
-    height: 2.1em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-    font-size: 7em;
+    font-size: 4em;
   }
 
   .bk {
@@ -105,8 +99,4 @@
     left: .1em;
   }
 
-  .tt{
- 
-  
-  }
   

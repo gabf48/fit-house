@@ -1,3 +1,4 @@
+import { ImplicitReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,7 +14,7 @@ export class CalculatorComponent implements OnInit {
   varsta: number = null;
   dif: number = this.inaltime - 150;
   dif2: number = this.varsta - 20;
-
+  imc1 : string = " kg"
 
   genuri: string[] = [
     'Masculin',
@@ -38,8 +39,12 @@ export class CalculatorComponent implements OnInit {
         this.imc = this.inaltime - 100 - ((this.inaltime - 150) / 2, 5 + (this.varsta - 20) / 6);
       }
     }
-    
+  
+this.imc1 = this.imc.toString() + " kg";    
+
+
   }
+
 
 
 }
