@@ -132,13 +132,13 @@ private handleAuthentication(
         
         switch (errorRes.error.error.message) {
             case 'EMAIL_EXISTS':
-                errorMessage = 'Acest email exista deja in baza de date! Pentru a recupera parola, contacteaza personalul salii de sport.';
+                errorMessage = 'Acest email există deja în baza de date! Pentru a recupera parola, contactează personalul sălii de sport.';
                 break;
             case 'EMAIL_NOT_FOUND':
-                errorMessage = 'Acest cont nu exista in baza de date. Poti sa-ti creezi un cont chiar acum.';
+                errorMessage = 'Acest cont nu există în baza de date. Poți să-ți creezi un cont chiar acum.';
                 break;
             case 'INVALID_PASSWORD':
-                errorMessage = 'Parola gresita. Pentru recuperarea parolei contacteaza personalul salii de sport.';
+                errorMessage = 'Parolă greșită. Pentru recuperarea parolei contactează personalul sălii de sport.';
                 break;
              }
     return throwError(errorMessage);
