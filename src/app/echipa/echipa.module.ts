@@ -1,3 +1,4 @@
+
 import { EchipaComponent } from './echipa.component';
 import { NgModule } from "@angular/core";
 import { FormsModule } from '@angular/forms';
@@ -10,8 +11,8 @@ import { RouterModule } from '@angular/router';
         RouterModule.forChild([
             { path: '', component: EchipaComponent },
         ])
-    ], 
+    ],
     exports: []
 })
 
-export class EchipaModule {}
+export class EchipaModule { }

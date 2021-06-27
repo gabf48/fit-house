@@ -3,26 +3,26 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">FitHouse</a>
+      <a class="navbar-brand"><fa-icon [icon]="faDumbbell"></fa-icon> FitHouse <fa-icon [icon]="faDumbbell"></fa-icon></a>
     </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
       
-        <li routerLinkActive="active"><a routerLink="/articole"><fa-icon [icon]="faNewspaper"></fa-icon> Articole</a></li>
-        <li routerLinkActive="active"><a routerLink="/echipa"><fa-icon [icon]="faUsers"></fa-icon> Echipa</a></li>
-        <li routerLinkActive="active" *ngIf="isAuthenticated"><a routerLink="/clienti">Lista clienti</a></li>
-        <li routerLinkActive="active"><a routerLink="/calculator"><fa-icon [icon]="faCalculator"></fa-icon> Calculator</a></li>
-        <li routerLinkActive="active"><a routerLink="/tarife"><fa-icon [icon]="faDollarSign"></fa-icon> Tarife</a></li>
-        <li routerLinkActive="active"><a routerLink="/galerie"><fa-icon [icon]="faImages"></fa-icon> Galerie</a></li>
-        <li routerLinkActive="active"><a routerLink="/orar"><fa-icon [icon]="faCalendarAlt"></fa-icon> Orar</a></li>
+        <li routerLinkActive="active"><a routerLink="/articole" data-toggle="tooltip" data-placement="top" title="Articole"><fa-icon [icon]="faNewspaper"></fa-icon> </a></li>
+        <li routerLinkActive="active"><a routerLink="/echipa" data-toggle="tooltip" data-placement="top" title="Echipa"><fa-icon [icon]="faUsers"></fa-icon> </a></li>
+        <li routerLinkActive="active" *ngIf="isAuthenticated"><a routerLink="/clienti" data-toggle="tooltip" data-placement="top" title="Lista clienti"><fa-icon [icon]="faUserFriends"></fa-icon> </a></li>
+        <li routerLinkActive="active"><a routerLink="/calculator" data-toggle="tooltip" data-placement="top" title="Calculator"><fa-icon [icon]="faCalculator"></fa-icon> </a></li>
+        <li routerLinkActive="active"><a routerLink="/tarife" data-toggle="tooltip" data-placement="top" title="Tarife"><fa-icon [icon]="faDollarSign"></fa-icon></a></li>
+        <li routerLinkActive="active"><a routerLink="/galerie" data-toggle="tooltip" data-placement="top" title="Galerie foto"><fa-icon [icon]="faImages"></fa-icon> </a></li>
+        <li routerLinkActive="active"><a routerLink="/orar" data-toggle="tooltip" data-placement="top" title="Orar"><fa-icon [icon]="faCalendarAlt"></fa-icon> </a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
         <li routerLinkActive="active" *ngIf="isAuthenticated">
 
           <li class="dropdown" appDropdown *ngIf="isAuthenticated">
-            <a style="cursor: pointer;" class="dropdown-toggle" role="button">Contul meu <span class="caret"></span></a>
+            <a style="cursor: pointer;" class="dropdown-toggle" role="button" data-toggle="tooltip" data-placement="top" title="Contul meu"><fa-icon [icon]="faUserCircle"></fa-icon> <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a style="cursor: pointer;" routerLink="/date-personale">Date personale</a></li>
               <li><a style="cursor: pointer;" routerLink="/abonament">Abonament</a></li> 
@@ -31,11 +31,11 @@
           </li>
 
         <li routerLinkActive="active" *ngIf="!isAuthenticated">
-          <a style="cursor: pointer;" routerLink="/auth"  class="dropdown-toggle" role="button"><i class="fa fa-fw fa-user"></i>Autentificare</a>
+          <a style="cursor: pointer;" routerLink="/auth"  class="dropdown-toggle" role="button" data-toggle="tooltip" data-placement="top" title="Autentificare"><i class="fa fa-fw fa-user"></i></a>
         </li>
 
         <li *ngIf="isAuthenticated">
-          <a style="cursor: pointer;" (click)="onLogout()">Delogare</a>
+          <a style="cursor: pointer;" (click)="onLogout()" data-toggle="tooltip" data-placement="top" title="Delogare"><fa-icon [icon]="faSignOutAlt"></fa-icon> </a>
         </li>
        
       <!--  <li class="dropdown" appDropdown *ngIf="isAuthenticated">
