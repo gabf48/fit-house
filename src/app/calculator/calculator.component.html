@@ -1,65 +1,74 @@
 
- <div class="col-6 col-md-4 bk">
-  <h1 align="center">Greautatea ideala</h1>
-<li *ngFor="let gen of genuri"> {{gen}}
-    </li>
-
-    <div class="form-group">
-      <label>Gen</label>
-      <div class="form-control">
-        <label class="radio-inline">
-          <input type="radio" value="masculin" name="gen"
-          [(ngModel)]="gen">
-          Masculin
-        </label>
-        <label class="radio-inline">
-          <input type="radio" value="feminin" name="gen"
-          [(ngModel)]="gen">
-          Feminin
-        </label>
-      </div>
+ <div class="col-6 col-md-4">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+    <h1 class="panel-title" align="center">Greautatea ideala</h1>
     </div>
-
+    <div class="panel-body">
+      <li *ngFor="let gen of genuri"> {{gen}}
+      </li>
   
-
-<br>
-
-<label>Inaltime</label>
-<input
-    type="number" 
-    placeholder="inlaltime in cm"
-    name="inaltime"
-    [(ngModel)]="inaltime"
-    required
-    class="form-control"
-    min="0"
-    pattern="^[0-9]+\.[0-9][0-9]$"
-    > <br> 
-
-    <label>Varsta  </label>
-    <input
-    type="number" 
-    placeholder="varsta in ani"
-    name="varsta"
-    [(ngModel)]="varsta"
-    required
-    class="form-control"
-    min="0"
-    pattern="^[0-9]+\.[0-9][0-9]$"
-    >   
-   
-
-
-   
-   <br>   <br>
-<button 
-  type="button" 
-  value="Calculeaza" 
-  class="btn calc" 
-  (click)="onCalculeazaIMC()"
-  >Calculeaza
-</button>
+      <div class="form-group">
+        <label>Gen</label>
+        <div class="form-control">
+          <label class="radio-inline">
+            <input type="radio" value="masculin" name="gen"
+            [(ngModel)]="gen">
+            Masculin
+          </label>
+          <label class="radio-inline">
+            <input type="radio" value="feminin" name="gen"
+            [(ngModel)]="gen">
+            Feminin
+          </label>
+        </div>
+      </div>
+  
+    
+  
+  <br>
+  
+  <label>Inaltime</label>
+  <input
+      type="number" 
+      placeholder="inlaltime in cm"
+      name="inaltime"
+      [(ngModel)]="inaltime"
+      required
+      class="form-control"
+      min="0"
+      pattern="^[0-9]+\.[0-9][0-9]$"
+      > <br> 
+  
+      <label>Varsta  </label>
+      <input
+      type="number" 
+      placeholder="varsta in ani"
+      name="varsta"
+      [(ngModel)]="varsta"
+      required
+      class="form-control"
+      min="0"
+      pattern="^[0-9]+\.[0-9][0-9]$"
+      >   
+     
+  
+  
+     
+     <br>   <br>
+  <button 
+    type="button" 
+    value="Calculeaza" 
+    class="btn calc" 
+    (click)="onCalculeazaIMC()"
+    >Calculeaza
+  </button>
+  
+    </div>
+    </div>
+  
 </div>
 <div class="col-6 col-md-4">
 <p class="top">{{imc}}</p>
 </div>
+
