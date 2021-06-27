@@ -61,9 +61,41 @@
       background: white;
   }
 
-  .btn-outline-success {
-    background-color:burlywood;
-    border-radius: 30%;
-    color: rebeccapurple;
-    border-color: seagreen;
+  .top {
+    display: inline-block;
+    align-content: center;
+    top: 0.7em;
+    left: 0.5em;
+    color: black;
+    text-align: center;
+    line-height: 1em;
+    padding: 0.8em 0.7em 0 0.7em;
+    position: relative;
+    height: 2.1em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+    font-size: 7em;
   }
+
+  .bk {
+    background-color:#e6e6e6;
+  }
+
+  .calc {
+    cursor: pointer;
+    position: relative;
+    border-color: #405061;
+    left: 0;
+    background-color: #EEE;
+    margin: .3em;
+    padding: .3em 0;
+    height: 2em;
+    width: 24em;
+    border-radius: 4px;
+  }
+  .calc:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+    left: .1em;
+  }
+  

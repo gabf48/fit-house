@@ -1,39 +1,54 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
-import { faNewspaper, faUsers, faCalculator, faDollarSign, faImages, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faNewspaper,
+  faUsers,
+  faCalculator,
+  faDollarSign,
+  faImages,
+  faCalendarAlt,
+  faUserFriends,
+  faSignOutAlt,
+  faUserCircle,
+  faDumbbell
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit, OnDestroy{
+export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
-private userSub: Subscription;
-faNewspaper = faNewspaper;
-faUsers = faUsers;
-faCalculator = faCalculator;
-faDollarSign = faDollarSign;
-faImages = faImages;
-faCalendarAlt = faCalendarAlt;
+  private userSub: Subscription;
+  faNewspaper = faNewspaper;
+  faUsers = faUsers;
+  faCalculator = faCalculator;
+  faDollarSign = faDollarSign;
+  faImages = faImages;
+  faCalendarAlt = faCalendarAlt;
+  faUserFriends = faUserFriends;
+  faSignOutAlt = faSignOutAlt;
+  faUserCircle = faUserCircle;
+  faDumbbell = faDumbbell;
   constructor(
     private authService: AuthService
-    ) {}
+  ) { }
 
-    ngOnInit(){
-      this.userSub = this.authService.user.subscribe(user => {
-        this.isAuthenticated = !!user;
-        console.log(!user);
-        console.log(!!user);
-      });
-    }
+  ngOnInit() {
+    this.userSub = this.authService.user.subscribe(user => {
+      this.isAuthenticated = !!user;
+      console.log(!user);
+      console.log(!!user);
+    });
+  }
 
 
-  onLogout(){
+  onLogout() {
     this.authService.logout();
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.userSub.unsubscribe();
   }
 }

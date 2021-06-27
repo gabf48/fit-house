@@ -19,34 +19,27 @@ export class CalculatorComponent implements OnInit {
     'Masculin',
     'Feminin'
   ];
- 
+
   constructor() {
-    
-   }
+
+  }
 
   ngOnInit(): void {
   }
 
 
-  
-  onCalculeazaIMC(){
 
-if (this.inaltime != null && this.varsta != null) {
-
-    if (this.gen == "masculin"){
-      
-   this.imc = this.inaltime - 100 -((this.inaltime - 150) /4 +( this.varsta - 20)/4);
+  onCalculeazaIMC() {
+    if (this.inaltime != null && this.varsta != null) {
+      if (this.gen == "masculin") {
+        this.imc = this.inaltime - 100 - ((this.inaltime - 150) / 4 + (this.varsta - 20) / 4);
+      }
+      if (this.gen == "feminin") {
+        this.imc = this.inaltime - 100 - ((this.inaltime - 150) / 2, 5 + (this.varsta - 20) / 6);
+      }
+    }
+    
   }
 
-  if (this.gen == "feminin"){
-    this.imc = this.inaltime - 100 -((this.inaltime - 150) /2,5 +( this.varsta - 20)/6);
-  } 
-  } else {
-        
-  }
-
-  
-}
-  
 
 }

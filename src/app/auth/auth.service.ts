@@ -125,20 +125,20 @@ private handleAuthentication(
   }
 
     private handleError(errorRes: HttpErrorResponse) {
-        let errorMessage = 'An unknown error occured!';
+        let errorMessage = 'Eroare!';
         if (!errorRes.error || !errorRes.error.error){
             return throwError(errorMessage);
         }
         
         switch (errorRes.error.error.message) {
             case 'EMAIL_EXISTS':
-                errorMessage = 'This email exists already';
+                errorMessage = 'Acest email exista deja in baza de date! Pentru a recupera parola, contacteaza personalul salii de sport.';
                 break;
             case 'EMAIL_NOT_FOUND':
-                errorMessage = 'This email does not exist';
+                errorMessage = 'Acest cont nu exista in baza de date. Poti sa-ti creezi un cont chiar acum.';
                 break;
             case 'INVALID_PASSWORD':
-                errorMessage = 'This password is not correct.';
+                errorMessage = 'Parola gresita. Pentru recuperarea parolei contacteaza personalul salii de sport.';
                 break;
              }
     return throwError(errorMessage);
