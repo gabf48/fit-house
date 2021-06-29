@@ -1,41 +1,8 @@
 <div class="row" align="center">
 
-    <div class="col-6 col-md-4">
-        <img class="user-logo" alt="image" src="../assets/echipa/poza1.jpg" width="300" height="200">
-        <h2>Mircea</h2>
+    <div class="col-6 col-md-4" *ngFor="let ech of echipa">
+        <img class="user-logo" alt="image" src={{ech.poza}} width="300" height="200">
+        <h2>{{ech.nume}}</h2>
     </div>
-    <div class="col-6 col-md-4">
-        <img class="user-logo" src="../assets/echipa/poza2.jpg" width="300" height="200">
-        <h2>Andrei</h2>
-    </div>
-    <div class="col-6 col-md-4">
-        <img class="user-logo" src="../assets/echipa/poza3.jpg" width="300" height="200">
-        <h2>Mihai</h2>
-    </div>
-
-    <div class="col-6 col-md-4">
-        <img class="user-logo" alt="image" src="../assets/echipa/poza4.jpg" width="300" height="200">
-        <h2>Dragoș</h2>
-    </div>
-    <div class="col-6 col-md-4">
-        <img class="user-logo" src="../assets/echipa/poza5.jpg" width="300" height="200">
-        <h2>Nicolae</h2>
-    </div>
-    <div class="col-6 col-md-4">
-        <img class="user-logo" src="../assets/echipa/poza6.jpg" width="300" height="200">
-        <h2>Anca</h2>
-    </div>
-
-    <div class="col-6 col-md-4">
-        <img class="user-logo" alt="image" src="../assets/echipa/poza7.jpg" width="300" height="200">
-        <h2>Paul</h2>
-    </div>
-    <div class="col-6 col-md-4">
-        <img class="user-logo" src="../assets/echipa/poza8.jpg" width="300" height="200">
-        <h2>Andreea</h2>
-    </div>
-    <div class="col-6 col-md-4">
-        <img class="user-logo" src="../assets/echipa/poza9.jpg" width="300" height="200">
-        <h2>Roxana</h2>
-    </div>
+  
 </div>

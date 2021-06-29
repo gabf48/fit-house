@@ -10,14 +10,16 @@
         <ul>An nastere</ul>
         <ul>Adresa</ul>
         <ul>Email</ul>
+        <ul>Antrenor</ul>
       </div>
       <div class="col-md-3" *ngFor="let user of users">
-        <ul>{{user | json}}</ul>
+        <ul>{{user.nume}}</ul>
         <ul>{{user.prenume}}</ul>
+        <ul>{{user.sex}}</ul>
+        <ul>{{user.an_nastere}}</ul>
         <ul>{{user.adresa}}</ul>
-        <ul></ul>
-        <ul></ul>
-        <ul></ul>
+        <ul>{{user.email}}</ul>
+        <ul>{{user.antrenor.nume}}</ul>
     </div>
       <div class="col-md-3"></div>
     </div>
