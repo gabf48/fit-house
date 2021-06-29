@@ -5,8 +5,7 @@
     <h1 class="panel-title" align="center">Greautatea ideală</h1>
     </div>
     <div class="panel-body">
-      <li *ngFor="let gen of genuri"> {{gen}}
-      </li>
+     
   
       <div class="form-group">
         <label>Gen</label>
@@ -70,6 +69,7 @@
 </div>
 <div class="col-6 col-md-4">
   
-<p class="top">{{imc1}}</p>
+
+<p class="top" *ngIf="imc1 !== ''">{{imc1 + " kg"}}</p>
 </div>
 

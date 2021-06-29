@@ -11,14 +11,16 @@
         <ul>Adresa</ul>
         <ul>Email</ul>
       </div>
-      <div class="col-md-3">
-        <ul>Filip</ul>
-        <ul>Gabriel</ul>
-        <ul>Masculin</ul>
-        <ul>1993</ul>
-        <ul>str. Sesul de sus nr.186G</ul>
-        <ul>gabf48@gmail.com</ul>
+      <div class="col-md-3" *ngFor="let user of users">
+        <ul>{{user | json}}</ul>
+        <ul>{{user.prenume}}</ul>
+        <ul>{{user.adresa}}</ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
     </div>
       <div class="col-md-3"></div>
     </div>
   </div>
+
+  
