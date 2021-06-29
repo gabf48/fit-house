@@ -1,1 +1,34 @@
-<p>clienti works!</p>
+<div class="container">
+	<div class="row">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead >
+            <tr class="danger">
+              <th>Nume</th>
+              <th>Prenume</th>
+              <th>An nastere</th>
+              <th>Oras</th>
+              <th>Email</th>
+              
+            </tr>
+          </thead>
+          <tbody *ngFor="let us of user">
+
+            <tr class="info">
+            
+              <td>{{us.nume}}</td>
+              <td>{{us.prenume}}</td>
+              <td>{{us.an_nastere}}</td>
+              <td>{{us.adresa}}</td>
+              <td>{{us.email}}</td>
+              
+            </tr>
+        
+          </tbody>
+        </table>   
+      </div>
+      <div class="col-md-12 text-center">
+      <ul class="pagination pagination-lg pager" id="myPager"></ul>
+      </div>
+	</div>
+</div>

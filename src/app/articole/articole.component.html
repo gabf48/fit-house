@@ -1,41 +1,42 @@
-<span *ngFor="let art of articles; let i = index" (click)="onSelect(art)">
-  <div class="container-fluid">
-    <div id="faq" role="tablist" aria-multiselectable="true">
-      <div class="panel panel-{{art.color}}">
-        <div class="panel-heading" role="tab" id={{i}}>
-          <h2 class="panel-title">
-            <a data-toggle="collapse" data-parent="#faq" href="#answer" aria-expanded="true" aria-controls="answerOne">
-              <i class={{art.icon}}></i>
 
+ <span *ngFor="let art of articles; let i = index"
+ (click)="onSelect(art)">
+<div class="container-fluid">
+  <div id="faq" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-{{art.color}}">
+      <div class="panel-heading" role="tab" id={{i}}>
+        <h2 class="panel-title">
+          <a data-toggle="collapse" data-parent="#faq" href="#answer" aria-expanded="true" aria-controls="answerOne">
+          
+            <i class={{art.icon}}></i>
+            
+            {{art.titlu}}
 
-              {{art.titlu}}
-
-            </a>
-          </h2>
-        </div>
-        <div id={{i}} class="panel-collapse collapse in" role="tabpanel" aria-labelledby="questionOne"
-          aria-expanded="true">
-          <div class="panel-body">
-            <div class="col-md-4">
-
+          </a>
+        </h2>
+      </div>
+      <div id={{i}} class="panel-collapse collapse in" role="tabpanel" aria-labelledby="questionOne" aria-expanded="true">
+        <div class="panel-body">
+          <div class="col-md-4">
+           
 
               <img src={{art.poza}} width="200" height="200">
+        
+          
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
 
-
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-
-                <h3 class="card-text">
-                  {{art.descriere}}
-                </h3>
-              </div>
+              <h3 class="card-text">
+                {{art.descriere}}
+              </h3>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
 </span>

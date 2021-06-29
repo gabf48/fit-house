@@ -1,1 +1,22 @@
-<p>antrenor works!</p>
+<div class="row">
+    <div class="col-md-4">&nbsp;</div>
+   
+      
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <div class="caption text-center" >
+              <div class="position-relative">
+                <h2>Antrenorul tau este</h2>
+                <img *ngFor="let user of users" src="{{user.antrenor.poza}}" style="width:200px;height:200px;" />
+              </div>
+              
+              <h2 *ngFor="let user of users"><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>&nbsp;{{user.antrenor.nume}}</h2>
+              
+          
+          </div>
+        </div>
+      
+      <div class="col-md-2">&nbsp;</div>
+    </div>
+  </div>

@@ -1,3 +1,5 @@
+import { ECHIPA } from './../../echipa/echipa-detalii';
+import { Echipa } from './../../echipa/echipa';
 export interface Users {
     nume: string;
     prenume: string;
@@ -6,4 +8,5 @@ export interface Users {
     adresa: string;
     poza: string;
     email: string;
+    antrenor: any;
   }
