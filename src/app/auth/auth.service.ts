@@ -122,7 +122,10 @@ private handleAuthentication(
     this.user.next(user);
     this.autoLogout(expiresIn * 1000);
     localStorage.setItem('userData', JSON.stringify(user));
+    localStorage.setItem('user', email);
   }
+
+    
 
     private handleError(errorRes: HttpErrorResponse) {
         let errorMessage = 'Eroare!';

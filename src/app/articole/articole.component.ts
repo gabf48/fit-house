@@ -1,3 +1,5 @@
+import { ARTICOLE } from './detaii-articole';
+import { Articole } from './articole';
 import { Component, OnInit } from '@angular/core';
 import {
   faDumbbell,
@@ -26,9 +28,19 @@ export class ArticoleComponent implements OnInit {
   faBed =  faBed;
   faRunning = faRunning;
   faDna = faDna;
+
+  articles = ARTICOLE;
+  selectedArticol?: Articole;
+  isCollapsed: boolean[] = [true]; 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
+
+  onSelect(art: Articole): void{
+    this.selectedArticol = art;
+  }
+
+  
 
 }

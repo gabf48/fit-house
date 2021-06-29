@@ -14,7 +14,7 @@ export class CalculatorComponent implements OnInit {
   varsta: number = null;
   dif: number = this.inaltime - 150;
   dif2: number = this.varsta - 20;
-  imc1 : string = " kg"
+  imc1 : string = ""
 
   genuri: string[] = [
     'Masculin',
@@ -40,7 +40,7 @@ export class CalculatorComponent implements OnInit {
       }
     }
   
-this.imc1 = this.imc.toString() + " kg";    
+this.imc1 = this.imc.toString();    
 
 
   }
