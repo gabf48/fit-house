@@ -1,28 +1,104 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-3">
+  <div class="main-body">
+        <div class="row gutters-sm">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                  <img *ngFor="let user of users" src={{user.poza}} alt="Admin" class="rounded-circle" width="150">
+                  <div class="mt-3">
+                    <h4 *ngFor="let user of users">{{user.prenume}}</h4>
+                    <p class="text-secondary mb-1" *ngFor="let user of users">{{user.an_nastere}}</p>
+                    <p class="text-muted font-size-sm" *ngFor="let user of users">{{user.adresa}}</p>
+                
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+            <div class="card mt-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Detalii</h3>
+                  <small>Înălțime</small>
+                  <div class="progress mb-3" style="height: 5px">
+                    <div class="progress-bar progress-bar-striped active"  role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <small>Greutate</small>
+                  <div class="progress mb-3" style="height: 5px">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <small>Circumferință talie</small>
+                  <div class="progress mb-3" style="height: 5px">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <small>Biceps</small>
+                  <div class="progress mb-3" style="height: 5px">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <small>Lățime umeri</small>
+                  <div class="progress mb-3" style="height: 5px">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8" *ngFor="let user of users">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h3 class="mb-0">Nume</h3>
+                  </div>
+                  <div class="col-sm-9 text-secondary" >
+                    {{user.nume + " " + user.prenume}}
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h3 class="mb-0">Email</h3>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{user.email}}
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h3 class="mb-0">Gen</h3>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{user.sex}}
+                  </div>
+                </div>
+                <hr>
+               
+               
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h3 class="mb-0">Adresa</h3>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{user.adresa}}
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+
+            <div class="row gutters-sm">
+             
+             
+            </div>
+
+
+
+          </div>
+        </div>
 
       </div>
-      <div class="col-md-3">
-        <ul>Nume</ul>
-        <ul>Prenume</ul>
-        <ul>Sex</ul>
-        <ul>An nastere</ul>
-        <ul>Adresa</ul>
-        <ul>Email</ul>
-        <ul>Antrenor</ul>
-      </div>
-      <div class="col-md-3" *ngFor="let user of users">
-        <ul>{{user.nume}}</ul>
-        <ul>{{user.prenume}}</ul>
-        <ul>{{user.sex}}</ul>
-        <ul>{{user.an_nastere}}</ul>
-        <ul>{{user.adresa}}</ul>
-        <ul>{{user.email}}</ul>
-        <ul>{{user.antrenor.nume}}</ul>
-    </div>
-      <div class="col-md-3"></div>
-    </div>
   </div>
-
-  
