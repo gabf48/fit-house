@@ -11,7 +11,7 @@
       
         <li routerLinkActive="active"><a routerLink="/articole" data-toggle="tooltip" data-placement="top" title="Articole"><fa-icon [icon]="faNewspaper"></fa-icon> </a></li>
         <li routerLinkActive="active"><a routerLink="/echipa" data-toggle="tooltip" data-placement="top" title="Echipa"><fa-icon [icon]="faUsers"></fa-icon> </a></li>
-        <li routerLinkActive="active" *ngIf="isAuthenticated"><a routerLink="/clienti" data-toggle="tooltip" data-placement="top" title="Listă clienți"><fa-icon [icon]="faUserFriends"></fa-icon> </a></li>
+        <li routerLinkActive="active" *ngIf=this.x><a routerLink="/clienti" data-toggle="tooltip" data-placement="top" title="Listă clienți"><fa-icon [icon]="faUserFriends"></fa-icon> </a></li>
         <li routerLinkActive="active"><a routerLink="/calculator" data-toggle="tooltip" data-placement="top" title="Calculator"><fa-icon [icon]="faCalculator"></fa-icon> </a></li>
         <li routerLinkActive="active"><a routerLink="/tarife" data-toggle="tooltip" data-placement="top" title="Tarife"><fa-icon [icon]="faDollarSign"></fa-icon></a></li>
         <li routerLinkActive="active"><a routerLink="/galerie" data-toggle="tooltip" data-placement="top" title="Galerie foto"><fa-icon [icon]="faImages"></fa-icon> </a></li>

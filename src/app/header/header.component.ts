@@ -13,6 +13,8 @@ import {
   faUserCircle,
   faDumbbell
 } from '@fortawesome/free-solid-svg-icons';
+import { Users } from '../cont/date-personale/users';
+import { USERS } from '../cont/date-personale/detalii-users';
 
 @Component({
   selector: 'app-header',
@@ -31,6 +33,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   faSignOutAlt = faSignOutAlt;
   faUserCircle = faUserCircle;
   faDumbbell = faDumbbell;
+  emailUser : string;
+  x : boolean = false;
+  users : Users[] = [];
   constructor(
     private authService: AuthService
   ) { }
@@ -38,9 +43,32 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.userSub = this.authService.user.subscribe(user => {
       this.isAuthenticated = !!user;
-      console.log(!user);
-      console.log(!!user);
     });
+
+    const userData = localStorage.user;
+    console.log(userData);
+    this.emailUser = userData;
+    this.findUsers();
+    this.checkAdmin();
+  }
+
+  findUsers() {
+    USERS.forEach(user => {
+      if(user.email === this.emailUser) {
+        this.users.push(user);
+      }
+    });
+   
+    console.log(this.users);
+  }
+
+  checkAdmin(){
+    if(this.emailUser == "antrenor@fithouse.com"){
+      this.x = true;
+      
+    }
+    console.log(this.x);
+    return this.x;
   }
 
 
