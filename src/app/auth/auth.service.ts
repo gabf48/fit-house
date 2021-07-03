@@ -96,8 +96,8 @@ autoLogin() {
 }
 
 logout(){
-  this.user.next(null);
   this.router.navigate(['/auth']);
+  this.user.next(null);
   localStorage.removeItem('userData');
   if (this.tokenExpirationTime){
     clearTimeout(this.tokenExpirationTime);
