@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
     declarations: [AntrenorComponent],
     imports: [ FormsModule,
