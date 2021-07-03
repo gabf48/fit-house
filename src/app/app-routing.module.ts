@@ -37,7 +37,11 @@ loadChildren: () => import('./galerie/galerie.module').then(m => m.GalerieModule
 loadChildren: () => import('./cont/date-personale/date-personale.module').then(m => m.DatePersonaleModule)},
 
 {path: 'antrenor',
-loadChildren: ()=> import('./cont/antrenor/antrenor.module').then(m => m.AntrenorModule)}
+loadChildren: ()=> import('./cont/antrenor/antrenor.module').then(m => m.AntrenorModule)},
+
+{path: 'abonament',
+loadChildren: ()=> import('./cont/abonament/abonament.module').then(m => m.AbonamentModule)}
+
 
 ];
 

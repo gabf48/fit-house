@@ -20,3 +20,216 @@
       <div class="col-md-2">&nbsp;</div>
     </div>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Sedinta nr.</th>
+              <th scope="col">Exercitii</th>
+              <th scope="col">Data</th>
+              <th scope="col">Ora</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">1</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                   
+                </div>
+              </td>
+              <td>Piept + triceps</td>
+              <td>02-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">2</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
+                   
+                </div>
+              </td>
+              <td>Picioare + umeri</td>
+              <td>05-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">3</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
+                   
+                </div>
+              </td>
+              <td>Spate + biceps</td>
+              <td>07-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">4</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                   
+                </div>
+              </td>
+              <td>Piept + triceps</td>
+              <td>09-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">5</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                   
+                </div>
+              </td>
+              <td>Picioare + umeri</td>
+              <td>12-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">6</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                   
+                </div>
+              </td>
+              <td>Spate + biceps</td>
+              <td>14-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">7</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                   
+                </div>
+              </td>
+              <td>Piept + triceps</td>
+              <td>16-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">8</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                   
+                </div>
+              </td>
+              <td>Picioare + umeri</td>
+              <td>19-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">9</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                   
+                </div>
+              </td>
+              <td>Spate + biceps</td>
+              <td>21-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">10</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                   
+                </div>
+              </td>
+              <td>Piept + triceps</td>
+              <td>23-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">11</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                   
+                </div>
+              </td>
+              <td>Picioare + umeri</td>
+              <td>26-07-2021</td>
+              <td > <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label" for="customCheck1">12</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                   
+                </div>
+              </td>
+              <td>Spate + biceps</td>
+              <td>28-07-2021</td>
+              <td >
+                <form [formGroup]="hourForm">
+                <select formControlName="hourControl">
+                  <option [value]="hour" *ngFor="let hour of hours">{{hour}}</option>
+                </select>
+               </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
