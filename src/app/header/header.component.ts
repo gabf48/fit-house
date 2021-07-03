@@ -11,7 +11,8 @@ import {
   faUserFriends,
   faSignOutAlt,
   faUserCircle,
-  faDumbbell
+  faDumbbell,
+  faAddressBook
 } from '@fortawesome/free-solid-svg-icons';
 import { Users } from '../cont/date-personale/users';
 import { USERS } from '../cont/date-personale/detalii-users';
@@ -33,6 +34,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   faSignOutAlt = faSignOutAlt;
   faUserCircle = faUserCircle;
   faDumbbell = faDumbbell;
+  faAddressBook = faAddressBook;
   emailUser : string;
   x : boolean = false;
   users : Users[] = [];

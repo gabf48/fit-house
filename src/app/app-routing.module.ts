@@ -40,7 +40,10 @@ loadChildren: () => import('./cont/date-personale/date-personale.module').then(m
 loadChildren: ()=> import('./cont/antrenor/antrenor.module').then(m => m.AntrenorModule)},
 
 {path: 'abonament',
-loadChildren: ()=> import('./cont/abonament/abonament.module').then(m => m.AbonamentModule)}
+loadChildren: ()=> import('./cont/abonament/abonament.module').then(m => m.AbonamentModule)},
+
+{path: 'contact',
+loadChildren: ()=> import('./contact/contact.module').then(m => m.ContactModule)}
 
 
 ];
