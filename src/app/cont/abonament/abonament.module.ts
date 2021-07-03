@@ -1,16 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { AntrenorComponent } from './antrenor.component';
+import { AbonamentComponent } from './abonament.component';
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-    declarations: [AntrenorComponent],
+    declarations: [AbonamentComponent],
     imports: [ FormsModule,
         CommonModule,
         ReactiveFormsModule,
         RouterModule.forChild([
-            { path: '', component: AntrenorComponent},
+            { path: '', component: AbonamentComponent},
         ])]
 })
-export class AntrenorModule{}
+export class AbonamentModule{}
