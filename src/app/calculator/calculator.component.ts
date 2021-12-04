@@ -1,5 +1,6 @@
 import { ImplicitReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
+
+  
+
 
   imc: number;
   gen = 'masculin';
@@ -21,6 +25,8 @@ export class CalculatorComponent implements OnInit {
     'Feminin'
   ];
 
+
+  
   constructor() {
 
   }
@@ -31,6 +37,10 @@ export class CalculatorComponent implements OnInit {
 
 
   onCalculeazaIMC() {
+
+    if(this.inaltime<100 || this.inaltime > 210 || this.varsta < 10 || this.varsta > 80){alert("Intorduceti o valoare reala!")
+  } else{
+
     if (this.inaltime != null && this.varsta != null) {
       if (this.gen == "masculin") {
         this.imc = this.inaltime - 100 - ((this.inaltime - 150) / 4 + (this.varsta - 20) / 4);
@@ -39,6 +49,7 @@ export class CalculatorComponent implements OnInit {
         this.imc = this.inaltime - 100 - ((this.inaltime - 150) / 2, 5 + (this.varsta - 20) / 6);
       }
     }
+  }
   
 this.imc1 = this.imc.toString();    
 

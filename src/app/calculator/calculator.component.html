@@ -2,7 +2,7 @@
  <div class="col-6 col-md-4">
   <div class="panel panel-info">
     <div class="panel-heading">
-    <h1 class="panel-title" align="center">Greautatea ideală</h1>
+    <h1 class="panel-title" align="center">Greutatea ideală</h1>
     </div>
     <div class="panel-body">
      
@@ -35,9 +35,12 @@
       [(ngModel)]="inaltime"
       required
       class="form-control"
-      min="0"
+      min="100"
+      max="210"
       pattern="^[0-9]+\.[0-9][0-9]$"
-      > <br> 
+      > 
+      
+      <br> 
   
       <label>Vârstă  </label>
       <input
